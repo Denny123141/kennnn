@@ -1,14 +1,4 @@
-// JANGAN DIHAPUS !!! HARGAI CREATOR PADA BOT INI !!!
-// BASE : ZEROYT7
-// PENGEMBANG : ABIL BOTZ
-// SUBSCRIBE YT : ABIL BOTZ & Zero YT7
-// DEVELOPER KONTAK = 082293295376 ( ABIL BOTZ )
-// BASE KONTAK = +62 851-5774-0529 ( BASE )
-// TQ FOR USE ABILBOTZV13 DONT FORGET TU SUPPORT
-// RECODE PAKAI OTAK ADA YG ERROR PASLU RECODE G USH NANYA DEVELOPER !!!
-// NYARI IDE SUSAH TAPI LU G SUBSCRIBE PARAH SIH
-// DH ITU AJA UBAH OWNER DI SETTING.JSON 
-//━━━━━━━━━━━━━━━[ ABIL BOTZ V13 ]━━━━━━━━━━━━━━━━━//
+//Ganti owner di setting.json
 
 const { fetchJosn, kyun, fetchText } = require('./lib/fetcher')
 const { color, bgcolor } = require('./lib/color')
@@ -109,7 +99,7 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 
 		mess = {
 			wait: 'Sabar Lagi Proses Tod...!',
-			success: 'Done Jangan Lupa Subscribe Zero YT7',
+			success: 'Sukses Tod',
 			error: {
 				stick: 'Gagal Convert Gambar To Sticker...Coba Lagi !',
 				Iv: 'Linknya Error Tod !'
@@ -119,7 +109,7 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 				group: 'Khusus Group Tod !'
 			}
 		}
-		faketeks = 'ABIL BOTZ'
+		faketeks = 'KenzBot'
 		const isUrl = (url) => {
         return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
         }
@@ -132,7 +122,7 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
         const mentions = (teks, memberr, id) => {
             (id == null || id == undefined || id == false) ? zeroyt7.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : zeroyt7.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
         }
-        const zero = fs.readFileSync ('./zeroyt7/zerothumb.jpg')
+        const zero = fs.readFileSync ('./kenn/kennthumb.jpg')
         const costum = (pesan, tipe, target, target2) => {
 			zeroyt7.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
 		}
@@ -200,7 +190,7 @@ const adyt = {
 "body": `hy`, 
 "mediaType": "2", 
 "mediaUrl": "https://youtu.be/ilrhJV_QMIE", 
-"thumbnail": fs.readFileSync('./zeroyt7/zero.jpg')
+"thumbnail": fs.readFileSync('./kenn/kenn.jpg')
 }
 
 
@@ -215,8 +205,8 @@ const adyt = {
                             itemCount : 123,
                             status: 1,
                             surface : 1,
-                            message: `SUBSCRIBE ABIL BOTZ`, 
-                            orderTitle: `SUBSCRIBE ABIL BOTZ`,
+                            message: `SUBSCRIBE ElestialHD🐦`, 
+                            orderTitle: `SUBSCRIBE ElestialHD🐦`,
                             thumbnail: zero, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -325,26 +315,23 @@ switch (command) {
 	case 'menu':
 	case 'help':
 	case 'abil':
-teks = `  「 𝙄𝙉𝙁𝙊 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍 」
-
-⬣ BASE SC : ZEROYT7
-⬣ PENGEMBANG : ABIL BOTZ
-⬣ SUBSCRIBE : https://bit.ly/3aVaQ5p
-⬣ JOIN GRUB : http://bit.ly/3j6ybW2
-_________________________________
+teks = ` _________________________________
 「 𝙄𝙉𝙁𝙊 𝘽𝙊𝙏 」
-⬣ RUNTIME = ${runtime(process.uptime())}
 ⬣ BOT NAME : ${botname}
 ⬣ OWNER NAME : ${ownername}
 ⬣ OWNER NUMBER : ${owner}
 ⬣ CREATOR : ${faketeks}
 ⬣ PREFIX : MULTI
 _________________________________
+「 𝙄𝙉𝙁𝙊 _*SERVER*_ 」
+⬣ SERVER BY = Kenan
+⬣ SERVER RUNTIME = ${runtime(process.uptime())}
+_________________________________
 「 𝙄𝙉𝙁𝙊 𝙆𝘼𝙈𝙐 」
 ⬣ USER NAME : ${pushname}
 ⬣ USER NUMBER : ${sender.split("@")[0]}
 _________________________________`
-img = fs.readFileSync('./zeroyt7/zero.jpg')
+img = fs.readFileSync('./kenn/kenn.jpg')
 trans = `
 ⬣ LIST MENU ⬣
 ✎ ${prefix}groupmenu
@@ -365,9 +352,7 @@ trans = `
 ✎ ${prefix}gabutmenu
 ✎ ${prefix}gamemenu
 ✎ ${prefix}othermenu
-✎ ${prefix}newfitur
 _________________________________
-🔖 SUBSCRIBE ABIL BOTZ !!!...`
 but = [
           { buttonId: `${prefix}allmenu`, buttonText: { displayText: '🔖 ALL MENU' }, type: 1 },
           { buttonId: `${prefix}owner`, buttonText: { displayText: '👥 OWNER' }, type: 1 }
@@ -493,7 +478,6 @@ break
 └────────────
 ╭─✮OWNER MENU✮
 │✎ ${prefix}owner
-│✎ ${prefix}sewabot
 │✎ ${prefix}bc
 │✎ ${prefix}report
 └────────────
@@ -543,20 +527,15 @@ break
 │✎ ${prefix}report
 │✎ ${prefix}infobot
 │✎ ${prefix}runtime
-│✎ ${prefix}sc
-└────────────
-╭─✮NEW FITUR✮
-│✎ ${prefix}officialgroup
+│✎ ${prefix}grup
 │✎ ${prefix}developerinfo
 │✎ ${prefix}ownerinfo
 │✎ ${prefix}bugreport
-│✎ ${prefix}tqto
 └────────────
-🔖 NOTE : FITUR MASIH DIKIT KARENA MASIH DALAM TAHAP PENGEMBANGAN OLEH PENGEMBANG
-🔖 REQ FITUR HUBUNGI DEVELOPER BOT`
+🔖 NOTE : FITUR DIKIT? BODO AMAT GW NOOB`
 	but = [
 { buttonId: `${prefix}owner`, buttonText: { displayText: '📌OWNER' }, type: 1 },
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: '📌OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: '📌JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, menunya, faketeks, but, mek)
 	break
@@ -579,7 +558,7 @@ sendButton(from, menunya, faketeks, but, mek)
 │✎ ${prefix}hidetag
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -592,7 +571,7 @@ tytyd = `
 │✎ ${prefix}tovideo
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -607,7 +586,7 @@ tytyd = `
 │✎ ${prefix}pinterest
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -622,7 +601,7 @@ tytyd = `
 │✎ ${prefix}listsurah
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -638,7 +617,7 @@ tytyd = `
 │✎ ${prefix}nekopoisearch
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -656,7 +635,7 @@ tytyd = `
 │✎ ${prefix}jarak
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -671,7 +650,7 @@ tytyd = `
 │✎ ${prefix}randomnama
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -685,7 +664,7 @@ tytyd = `
 │✎ ${prefix}google
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -698,7 +677,7 @@ tytyd = `
 │✎ ${prefix}jadian
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -710,7 +689,7 @@ tytyd = `
 │✎ ${prefix}stalktiktok
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -749,7 +728,7 @@ tytyd = `
 │✎ ${prefix}hentai4everyone
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -757,12 +736,11 @@ case 'ownermenu':
 tytyd = `
 ╭─✮OWNER MENU✮
 │✎ ${prefix}owner
-│✎ ${prefix}sewabot
 │✎ ${prefix}bc
 │✎ ${prefix}report
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -779,7 +757,7 @@ tytyd = `
 │✎ ${prefix}asupanrika
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -794,7 +772,7 @@ tytyd = `
 │✎ ${prefix}cecanthailand
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -806,7 +784,7 @@ tytyd = `
 │✎ ${prefix}randommemeindo
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 	break
@@ -823,7 +801,7 @@ tytyd = `
 │✎ ${prefix}caklontong
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 break
@@ -839,7 +817,7 @@ tytyd = `
 │✎ ${prefix}citacita
 └────────────`
 	but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 break
@@ -849,28 +827,16 @@ tytyd = `
 │✎ ${prefix}report
 │✎ ${prefix}infobot
 │✎ ${prefix}runtime
-│✎ ${prefix}sc
-└────────────`
-but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
-]
-sendButton(from, tytyd, faketeks, but, mek)
-break
-case 'newfitur':
-tytyd = `
-╭─✮NEW FITUR✮
-│✎ ${prefix}officialgroup
+│✎ ${prefix}grup
 │✎ ${prefix}developerinfo
 │✎ ${prefix}ownerinfo
 │✎ ${prefix}bugreport
-│✎ ${prefix}tqto
 └────────────`
 but = [
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tytyd, faketeks, but, mek)
 break
-
 //━━━━━━━━━━━━━━━[ FITUR GROUP ]━━━━━━━━━━━━━━━━━//
 
 case 'welcome':
@@ -2053,7 +2019,6 @@ break
 case 'sebulan':
 but = [
 { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-{ buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 },
 { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 }
 ]
 sendButton(from, "Silahkan Pilih Metode Pembayaran Dibawah", faketeks, but, mek)
@@ -2061,7 +2026,6 @@ break
 case 'permanen':
 but = [
 { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-{ buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 },
 { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 }
 ]
 sendButton(from, "Silahkan Pilih Metode Pembayaran Dibawah", faketeks, but, mek)
@@ -2070,19 +2034,13 @@ case 'gopay':
 but = [
 { buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
 ]
-sendButton(from, "GOPAY : 085157740529 (Mikey)", faketeks, but, mek)
-break
-case 'dana':
-but = [
-{ buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
-]
-sendButton(from, "DANA : 08988743499 (Mustakim)", faketeks, but, mek)
+sendButton(from, "GOPAY : 082133048747", faketeks, but, mek)
 break
 case 'ovo':
 but = [
 { buttonId: `${prefix}done`, buttonText: { displayText: 'DONE' }, type: 1 }
 ]
-sendButton(from, "OVO : 08988743499 (Mustakim)", faketeks, but, mek)
+sendButton(from, "OVO : 082133048747", faketeks, but, mek)
 break
 case 'donasi':
 txtt = `Mau Donasi Pake Apa Ya Kak ?
@@ -2091,92 +2049,9 @@ Semoga Rejekinya Tambah Lancar
 Amalnya Di Terima Oleh Allah S.W.T`
 but = [
 { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-{ buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 },
 { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 }
 ]
 sendButton(from, txtt, faketeks, but, mek)
-break
-
-//━━━━━━━━━━━━━━━[ AKHIR LIST DIAMOND ]━━━━━━━━━━━━━━━━━//
-
-case 'listdiamond':
-but = [
-{ buttonId: `${prefix}dmml`, buttonText: { displayText: 'DM ML' }, type: 1 },
-{ buttonId: `${prefix}dmff`, buttonText: { displayText: 'DM FF' }, type: 1 },
-{ buttonId: `${prefix}ucpubg`, buttonText: { displayText: 'UC PUBG' }, type: 1 }
-]
-sendButton(from, "Silahkan Pilih List Diamond Di Bawah Ini", faketeks, but, mek)
-break
-case 'dmml':
-qris = fs.readFileSync('./zeroyt7/qrgopay.jpg')
-trans = `©Created : Zero YT7`
-list = `✮Price List Diamond ML✮
-86dm = Idr 20.000
-172dm = Idr 40.000
-257dm = Idr 60.000
-344dm = Idr 80.000
-429dm = Idr 100.000
-514dm =  Idr 117.000
-600dm = Idr 136.000
-706dm = Idr 155.000
-878dm = Idr 195.000
-963dm = Idr 215.000
-1050dm = Idr 233.000
-
-Silahkan Pilih Metode Pembayaran
-Dibawah Ini`
-but = [
-          { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-          { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 },
-          { buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 }
-        ]
-sendButImage(from, list, trans, qris, but)
-break
-case 'dmff':
-qris = fs.readFileSync('./zeroyt7/qrgopay.jpg')
-trans = `©Created : Zero YT7`
-list = `✮Price List Diamond FF✮
-70dm = Idr 10.000
-100dm = Idr 15.000
-140dm = Idr 20.000
-210dm = Idr 30.000
-355dm = Idr 50.000
-500dm =  Idr 67.000
-720dm = Idr 95.000
-1000dm = Idr 130.000
-1075dm = Idr 140.000
-2000dm = Idr 250.000
-7290dm = Idr 910.000
-
-Silahkan Pilih Metode Pembayaran
-Dibawah Ini`
-but = [
-          { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-          { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 },
-          { buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 }
-        ]
-sendButImage(from, list, trans, qris, but)
-break
-case 'ucpubg':
-qris = fs.readFileSync('./zeroyt7/qrgopay.jpg')
-trans = `©Created : Zero YT7`
-list = `✮Price List Uc Pubg✮
-36uc = Idr 10.000
-73uc = Idr 15.000
-221uc = Idr 45.000
-770uc = Idr 140.000
-2013uc = Idr 340.000
-4200uc =  Idr 670.000
-8750uc = Idr 1.340.000
-
-Silahkan Pilih Metode Pembayaran
-Dibawah Ini`
-but = [
-          { buttonId: `${prefix}gopay`, buttonText: { displayText: 'GOPAY' }, type: 1 },
-          { buttonId: `${prefix}ovo`, buttonText: { displayText: 'OVO' }, type: 1 },
-          { buttonId: `${prefix}dana`, buttonText: { displayText: 'DANA' }, type: 1 }
-        ]
-sendButImage(from, list, trans, qris, but)
 break
 
 //━━━━━━━━━━━━━━━[ FITUR GABUT ]━━━━━━━━━━━━━━━━━//
@@ -2451,19 +2326,18 @@ zeroyt7.sendMessage(from, tebakjenaka, text, {quoted: ftrol})
 }, 0) // 1000 = 1s,
 break
 
-//━━━━━━━━━━━━━━━[ FITUR OTHER ( MODIF BY ABIL BOTZ ) ]━━━━━━━━━━━━━━━━━//
+//━━━━━━━━━━━━━━━[ FITUR OTHER ]━━━━━━━━━━━━━━━━━//
 
 case 'infobot':
 tod = `
-「 ABIL BOTZ V13 」
+「 KenzBot 」
 📌 PREFIX = Multi
 📌 RUNTIME = ${runtime(process.uptime())}
 📌 BOT NAME = ${botname}
-📌 YOUTUBE = https://bit.ly/3aVaQ5p
-📌 CREATOR = AbilBotz`
+📌 CREATOR = Kenan`
 but = [
 { buttonId: `${prefix}menu`, buttonText: { displayText: 'BCK MENU➡️' }, type: 1 },
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, tod, faketeks, but, mek)
 break
@@ -2474,10 +2348,9 @@ reply(teks);
 break
 case 'sc':
 hayo = `
-Bot Ini Menggunakan Sc Dari Youtube : http://bit.ly/3aVaQ5p
-Jangan Lupa Di Subscribe Ya
+Bot Ini Menggunakan Sc Dari Ownernya 
 
-Mau Req Fitur? Chat : wa.me/6282293295376`
+Mau Req Fitur? Chat : wa.me/6282133048747`
 zeroyt7.sendMessage(from, hayo, text, {quoted: ftrol})
 break
 case 'report':
@@ -2489,48 +2362,40 @@ var options = {
 text: teks1,
 contextInfo: { mentionedJid: [nomor] },
 }
-zeroyt7.sendMessage(`6285157740529@s.whatsapp.net`,`6282293295376@s.whatsapp.net`, options, text, { quoted: ftrol })
+zeroyt7.sendMessage(`6282133048747@s.whatsapp.net`,`6282293295376@s.whatsapp.net`, options, text, { quoted: ftrol })
 reply('Masalah Telah Di Laporkan Ke Developer BOT, Mohon Tunggu Untuk Proses Perbaikan oleh Developer')
 break
 
 //━━━━━━━━━━━━━━━[ PENAMBAHAN FITUR BY ABILBOTZ ]━━━━━━━━━━━━━━━━━//
 
-case 'tqto':
-but = [
-{ buttonId: `${prefix}abilbotz`, buttonText: { displayText: 'ABILBOTZ' }, type: 1 },
-{ buttonId: `${prefix}zeroyt7`, buttonText: { displayText: 'ZEROYT7' }, type: 1 },
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
-]
-sendButton(from, "*Hai Kak 👋 *\nBerikut Nama² Developer Pada Bot Ini", faketeks, but, mek)
-break
 case 'bugreport':
               if (args.length < 1) return reply(`Ketik ${prefix}bugreport [fiturnya] [Error Nya Gimana]`) 
               teks = args.join(' ')
               reply('Terima Kasih Telah Melaporkan Bug Pada Pengembang Bot, Jika Itu Sekedar Iseng Maka Akan Di Ban Oleh Bot!')
               zeroyt7.sendMessage('6282293295376@s.whatsapp.net',`*Bug Report:* ${teks}`, text)
               break
-case 'officialgroup':
+case 'grup':
 but = [
 { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER' }, type: 1 },
 { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
 ]
-sendButton(from, "Official Group : https://bit.ly/0fficialGroup\nYoutube : http://bit.ly/3aVaQ5p", faketeks, but, mek)
+sendButton(from, "Join Sini : https://chat.whatsapp.com/GNv7yrYCPFvJYhKx39YmkH", faketeks, but, mek)
 break
 case 'developerinfo':
 but = [
 { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER' }, type: 1 },
 { buttonId: `${prefix}menu`, buttonText: { displayText: 'MENU' }, type: 1 },
 ]
-sendButton(from, "NAMA = ABILBOT\nUMUR = 1800\nHOBI = BOONGIN ORG\nOfficial Group : https://bit.ly/0fficialGroup\nYoutube : http://bit.ly/3aVaQ5p", faketeks, but, mek)
+sendButton(from, "NAMA = Kenn\nUMUR = 1980\nHOBI = BOONGIN ORG(TERMASUK SEMUA INFO YANG ADA DI SINI)", faketeks, but, mek)
 break
 case 'ownerinfo':
 abil = `
-NAMA = ABIL BOTZ
-UMUR = 1800
+NAMA = Kenan
+UMUR = 1920
 PEKERJAAN = PELAJAR`
 but = [
 { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER' }, type: 1 },
-{ buttonId: `${prefix}officialgroup`, buttonText: { displayText: 'OFFICIAL GROUP' }, type: 1 }
+{ buttonId: `${prefix}grup`, buttonText: { displayText: 'JOIN GRUP' }, type: 1 }
 ]
 sendButton(from, abil, faketeks, but, mek)
 break
